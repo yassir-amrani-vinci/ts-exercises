@@ -1,3 +1,49 @@
 ### Read all films
 GET http://localhost:3000/films
 
+### Read all films with query parameter duration
+GET http://localhost:3000/films?duration=120
+
+### Read all films wuth query ID
+GET http://localhost:3000/films/1
+### Create a new film
+POST http://localhost:3000/films
+Content-Type: application/json
+
+{
+  "title": "New Film 2",
+  "director": "John Doe",
+  "duration": 120,
+  "imageUrl": "https://example.com/image.jpg",
+  "description": "Un super film",
+  "budget": 50
+}
+
+### delete a film
+DELETE http://localhost:3000/films/4
+
+### Update a film
+PATCH http://localhost:3000/films/3
+Content-Type: application/json
+
+{
+  "title": "Updated Filmmm",
+  "director": "John Doe",
+  "duration": 130,
+  "imageUrl": "https://example.com/image.jpg",
+  "description": "Un super film",
+  "budget": 60
+}
+
+### Replace a film or create it if it doesn't exist
+PUT http://localhost:3000/films/10
+Content-Type: application/json
+
+{
+  "title": "New Film",
+  "director": "John Doe",
+  "duration": 120,
+  "imageUrl": "https://example.com/image.jpg",
+  "description": "Un super film",
+  "budget": 50
+}

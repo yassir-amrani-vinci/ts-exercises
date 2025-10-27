@@ -6,7 +6,7 @@
   "scripts": {
     "tsc": "tsc",
     "debug": "npm run dev",
-    "dev": "ts-node-dev bin/www",
+    "dev": "ts-node-dev bin/www.ts",
     "lint": "eslint --ext .ts .",
     "start": "node build/bin/www"
   },

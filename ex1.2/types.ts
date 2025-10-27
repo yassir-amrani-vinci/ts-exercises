@@ -8,4 +8,14 @@ interface Film {
   imageUrl?: string;
 }
 
-export type { Film};
+type newFilm = Omit<Film, "id">;
+
+interface Text {
+  id: string;
+  content: string;
+  level: 'easy' | 'medium' | 'hard';
+}
+
+type newText = Omit<Text, "id">;
+
+export type { Film, newFilm, Text, newText };
